@@ -24,7 +24,9 @@
           <li><a href="visit.html">Visit</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a class="cart" href="cart.html">Cart+0</a>
+        <a class="cart" href="cart.html">
+            <ion-icon name="cart"></ion-icon><span id="num_items"> 0</span>
+        </a>
         <a class="login" href="#">Login</a>
       </div>
     </div>
@@ -40,7 +42,7 @@
             <img id="active_sel" src="images/product_img.png" alt="product image" >
             <!-- <img data-image="blueSmoothie" src="images/blueSmoothie.png" alt="blueberry flavored">
             <img data-image="peachSmothie" src="images/peachSmoothie.png" alt="peach flavored"> -->
-            <form class="purchase_form">
+            <form class="purchase_form" onsubmit="return add_item()">
                 <input type="radio" id="one_time" name="purchase_option" value="One time purchase">
                 <label for="one_time">One time ourchase ($43.99 | $3.50/bottle)</label><br>
                 <input type="radio" id="subscribe" name="purchase_option" value="Subscribe & purchase">
@@ -55,9 +57,11 @@
                 </select>
                 
                 <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" name="quantity" min="1">                
-                <input type="submit" class = "submit_button" value="Add to Cart">
+                <input type="number" id="quantity" name="quantity" min="1"> 
+                <!-- <button onclick="add_item()">Click me</button> -->
+                <input type="submit" class ="submit_button" value="Add to Cart" >
             </form>   
+            <!-- <button onclick="add_item()">Click me</button>                -->
             <p class = "note">One box = 12 bottles</p>
         </div>
         <div class="right_column">
@@ -195,7 +199,9 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <p> Copyright © 2022 Nature.io</p>
-  </footer>
-      
+    </footer>
+    <!-- icon script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
