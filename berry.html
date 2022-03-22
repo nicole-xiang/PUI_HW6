@@ -7,8 +7,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">    
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
-
     <title>Nature.io</title>
   </head>
 
@@ -57,9 +55,9 @@
                 </select>
                 
                 <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" name="quantity" min="1"> 
+                <input type="number" name="quantity" min="1"> 
                 <!-- <button onclick="add_item()">Click me</button> -->
-                <input type="submit" class ="submit_button" value="Add to Cart" >
+                <input type="submit" class ="submit_button" onclick="cart_alert()" value="Add to Cart" >
             </form>   
             <!-- <button onclick="add_item()">Click me</button>                -->
             <p class = "note">One box = 12 bottles</p>
@@ -200,7 +198,8 @@
       </ul>
       <p> Copyright © 2022 Nature.io</p>
     </footer>
-    <!-- icon script -->
+
+    <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>

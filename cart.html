@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">    
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
     <title>Nature.io</title>
   </head>
 
@@ -24,7 +23,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <a class="cart" href="cart.html">
-          <ion-icon name="cart"></ion-icon><span> 0</span>
+          <ion-icon name="cart"></ion-icon><span id="num_items"> 0</span>
         </a>
         <a class="login" href="#">Login</a>
       </div>
@@ -41,10 +40,52 @@
                 <h3 class="product_title">Berry Glad to Meet You</h3>
                 <p class="product_flavor">Blueberry</p>
             </div>
-            <div class="quantity">x1</div>
+            <div class="quantity">
+              <span class="minus">-</span>
+              <input type="text" class="item_quantity" value="1"/>
+              <span class="plus">+</span>
+            </div>
             <div class="delivery_period">every 14 days</div>
             <div class="price">$35.99</div>
-            <a class="delete" href="#">Delete</a> 
+            <a class="delete" href="#">
+              <ion-icon name="trash" class="trash_icon"></ion-icon>
+            </a> 
+        </div>
+
+        <div class="container cart_page">
+          <img class="product_image" src="images/2.png" width="15%">
+          <div class="product_info">
+              <h3 class="product_title">Esspres'shew Self</h3>
+              <p class="product_flavor">Original</p>
+          </div>
+          <div class="quantity">
+            <span class="minus">-</span>
+            <input type="text" class="item_quantity" value="1"/>
+            <span class="plus">+</span>
+          </div>
+          <div class="delivery_period">every 14 days</div>
+          <div class="price">$35.99</div>
+          <a class="delete" href="#">
+            <ion-icon name="trash" class="trash_icon"></ion-icon>
+          </a> 
+        </div>
+
+        <div class="container cart_page">
+          <img class="product_image" src="images/4.png" width="15%">
+          <div class="product_info">
+              <h3 class="product_title">Straw Na-Na-Na</h3>
+              <p class="product_flavor">Original</p>
+          </div>
+          <div class="quantity">
+            <span class="minus">-</span>
+            <input type="text" class="item_quantity" value="1"/>
+            <span class="plus">+</span>
+          </div>
+          <div class="delivery_period">every 14 days</div>
+          <div class="price">$35.99</div>
+          <a class="delete" href="#">
+            <ion-icon name="trash" class="trash_icon"></ion-icon>
+          </a> 
         </div>
     </div>
 
@@ -59,9 +100,10 @@
       </ul>
       <p> Copyright © 2022 Nature.io</p>
     </footer>
+
+    <script src="script.js"></script>
     <!-- icon script -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
   </body>
 </html>

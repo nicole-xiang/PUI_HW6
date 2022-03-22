@@ -68,6 +68,8 @@ p{
 .cart:hover{
     color:white;
 }
+
+
 .nav ul {
     padding: 0px;
     margin: 0px;
@@ -421,9 +423,41 @@ textarea{
     font-weight: bold;
     margin-top:0;
 }
-.delete{
+
+/* cart page */
+.trash_icon{
     color:#dda407;
-    font-weight: bold;
+    padding: right 12px;
+    font-size: 24px;
+}
+.quantity{
+    padding:0;
+}
+
+.quantity span {
+    cursor:pointer;
+}
+
+.minus, .plus{
+    width:20px;
+    height:20px;
+    background:#FFBE0B;
+    border-radius:5px;
+    padding:5px;
+    border:1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.quantity input{
+    height:30px;
+    width: 50px;
+    text-align: center;
+    font-size: 15px;
+    border:1px solid #FFBE0B;
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: middle;
 }
 /* footer */
 footer {
