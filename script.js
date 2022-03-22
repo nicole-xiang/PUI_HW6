@@ -42,16 +42,18 @@ function onLoadCart(){
 }
 function setQuantity(){
     let num_products = localStorage.getItem('num_items');
-    num_products = parseInt(num_products); // convert to int 
+    num_products = parseInt(num_products); // convert to int
+    let quant = parseInt(document.getElementById('item_quant').value); 
+    console.log(quant);
     if (num_products){ // if exist product
-        console.log("adding 1 to cart quant")
-        localStorage.setItem('num_items',1+num_products);
-        document.getElementById("num_items").innerHTML = 1+num_products;
+        console.log("adding item to cart")
+        localStorage.setItem('num_items',quant+num_products);
+        document.getElementById("num_items").innerHTML = quant+num_products;
     }
     else{
-        console.log("adding 1 to empty cart")
-        localStorage.setItem('num_items',1);
-        document.getElementById("num_items").innerHTML = 1;
+        console.log("adding item to empty cart");
+        localStorage.setItem('num_items',quant);
+        document.getElementById("num_items").innerHTML = quant;
     }
 }
 window.onload = onLoadCart();
