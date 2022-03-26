@@ -1,3 +1,20 @@
+class cartItem {
+    constructor(title, flavor, quantity, itemPrice) {
+      this.title = title; // string 
+      this.flavor = flavor; // string
+      this.quantity = quantity; // # boxes (int)  
+      this.itemPrice = itemPrice; // single item price (int)
+      this.total = this.quantity * this.itemPrice // item total (int)
+    }
+
+    // Methods 
+
+  }
+function setDrink(){
+    // hard code all drink objects 
+    // check which drink object it is based on name   
+}
+
 function changeImage(flavor,ele) {
     var source = "images/"+flavor+"Smoothie.png"
     document.getElementById("active_sel").src = source;
@@ -16,20 +33,44 @@ function changeImage(flavor,ele) {
     }
 }
 
-function cart_alert() {
+function cartAlert() {
     alert('Added item to cart!');
     return false;
 }
-  
+function setDrinkCart(product){
+    // update local storage
+    let itemsInCart = localStorage.getItem('itemsInCart');
+    // show item on cart page 
+    // delete function 
+}
 
-function add_item(){
+function addItem(){
     // update number of items in cart logo
-    console.log("setting quantity")
-    setQuantity()
+    console.log("setting quantity");
+    setQuantity();  
 
+    // update cart page 
+    // make new drink object 
+    title = document.getElementById("drinkTitle").innerHTML;
+    quant = parseInt(document.getElementById('item_quant').value); 
+    if (isNaN(quant)) {quant = 0;}
+    if (document.getElementById("one_time").checked == true) {
+        price = 43.99;
+    } 
+    else{
+        price = 35.99; 
+    }
+    var flavors = document.getElementsByClassName("f_option");
+    flavor = "Original";
+    for (let i = 0; i<flavors.length; i++){
+        if (flavors[i].style.border != ""){
+            flavor = flavors[i].alt;
+        }
+    }
+    product = new cartItem(title,flavor,quant,price);
+    console.log(product);
+    setDrinkCart(product); // add product to cart page 
     return false;
-
-    // add item to cart page 
 }
 function onLoadCart(){
     console.log("loading cart")
@@ -40,10 +81,13 @@ function onLoadCart(){
         console.log(document.getElementById("num_items").innerHTML);
     }
 }
+
 function setQuantity(){
+    console.log("setting quantity")
     let num_products = localStorage.getItem('num_items');
     num_products = parseInt(num_products); // convert to int
     let quant = parseInt(document.getElementById('item_quant').value); 
+    if (isNaN(quant)) {quant = 0;}
     console.log(quant);
     if (num_products){ // if exist product
         console.log("adding item to cart")
@@ -55,6 +99,7 @@ function setQuantity(){
         localStorage.setItem('num_items',quant);
         document.getElementById("num_items").innerHTML = quant;
     }
+    return false;
 }
 window.onload = onLoadCart();
 

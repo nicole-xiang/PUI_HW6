@@ -32,7 +32,7 @@
     <!-- main section -->
     <div class = "main">
         <a href="explore.html" class="back">back</a>
-        <h1>Berry Glad to Meet You</h1>
+        <h1 id="drinkTitle">Berry Glad to Meet You</h1>
         <div class = "container"> 
         <!-- <img src="images/rating.png" width="5%"> -->
         <!-- column for image -->
@@ -40,9 +40,9 @@
             <img id="active_sel" src="images/product_img.png" alt="product image" >
             <!-- <img data-image="blueSmoothie" src="images/blueSmoothie.png" alt="blueberry flavored">
             <img data-image="peachSmothie" src="images/peachSmoothie.png" alt="peach flavored"> -->
-            <form class="purchase_form" onsubmit="return add_item()">
+            <form class="purchase_form" onsubmit="return addItem()">
                 <input type="radio" id="one_time" name="purchase_option" value="One time purchase">
-                <label for="one_time">One time ourchase ($43.99 | $3.50/bottle)</label><br>
+                <label for="one_time">One time purchase ($43.99 | $3.50/bottle)</label><br>
                 <input type="radio" id="subscribe" name="purchase_option" value="Subscribe & purchase">
                 <label for="subscribe">Subscribe & purchase ($35.99 | $3.09/bottle)</label><br>
                 <br>
@@ -56,7 +56,7 @@
                 
                 <label for="quantity">Quantity</label>
                 <input type="number" name="quantity" id = "item_quant" min="1"> 
-                <input type="submit" class ="submit_button" onclick="cart_alert()" value="Add to Cart" >
+                <input type="submit" class ="submit_button" onclick="cartAlert()" value="Add to Cart" >
             </form>   
             <!-- <button onclick="add_item()">Click me</button>                -->
             <p class = "note">One box = 12 bottles</p>
@@ -85,10 +85,10 @@
                 <div class="flavors">
                     <p>Choose Your Flavor</p>
                     <div class="column">
-                      <img class="f_option" src="images/raspberry.png" alt="raspberry" onclick="changeImage('raspberry',1)" width="70%">
+                      <img class="f_option" src="images/raspberry.png" alt="Raspberry" onclick="changeImage('raspberry',1)" width="70%">
                     </div>
                     <div class="column">
-                      <img class="f_option" src="images/blueberry.png" alt="blueberry" onclick="changeImage('blueberry',2)" width="70%">
+                      <img class="f_option" src="images/blueberry.png" alt="Blueberry" onclick="changeImage('blueberry',2)" width="70%">
                     </div>
                     <div class="column">
                       <img class="f_option" src="images/peach.png" alt="Peach" onclick="changeImage('peach',3)" width="70%">
